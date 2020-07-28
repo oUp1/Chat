@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section Main
+{
+    <div>
+        @using (Html.BeginForm("SendMessage", "Home", FormMethod.Post))
+        {
+            <input type="text" readonly class="textbox" />
+
+            <input type="text" id="text" name="text" class="inputbox" />
+
+            <input type="submit" class="btn" value="Send" />
+        }
+    </div>
+}
+
